@@ -2,7 +2,7 @@
   "name": "vscode-command-tester",
   "displayName": "VS Code Command Tester",
   "description": "Quick tool to test VS Code commands with arguments",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "dealenx",
   "repository": {
     "type": "git",
