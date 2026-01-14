@@ -4,25 +4,25 @@ export function activate(context: vscode.ExtensionContext) {
   const disposable = vscode.commands.registerCommand(
     "command-tester.quick",
     async () => {
-      // 1. QuickPick: выбор команды
+      // 1. QuickPick: command selection
       const commands = await vscode.commands.getCommands(true); // filter built-in
       const commandId = await vscode.window.showQuickPick(commands, {
-        placeHolder: "Выберите команду для executeCommand",
+        placeHolder: "Select command to execute",
         matchOnDetail: true,
       });
 
       if (!commandId) return;
 
-      // 2. InputBox: аргументы JSON
+      // 2. InputBox: JSON arguments
       const argsJson = await vscode.window.showInputBox({
-        prompt: `Выполнить: ${commandId}`,
+        prompt: `Execute: ${commandId}`,
         value: "[]",
-        placeHolder: '[] или {"key": "value"}',
+        placeHolder: '[] or {"key": "value"}',
       });
 
       if (!argsJson) return;
 
-      // 3. Выполнение!
+      // 3. Execution!
       try {
         let args: any[] = [];
         if (argsJson !== "[]") {
@@ -32,7 +32,7 @@ export function activate(context: vscode.ExtensionContext) {
         const result = await vscode.commands.executeCommand(commandId, ...args);
 
         vscode.window.showInformationMessage(
-          `✅ ${commandId} выполнен! Результат: ${JSON.stringify(
+          `✅ ${commandId} executed! Result: ${JSON.stringify(
             result ?? "OK",
             null,
             2
