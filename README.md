@@ -8,6 +8,10 @@
 
 A lightweight VS Code extension that allows you to quickly test any VS Code command with custom arguments. Perfect for developers who want to experiment with VS Code's extensive command API or test extension commands interactively.
 
+## 🎬 Demo
+
+![Command Tester Demo](https://private-user-images.githubusercontent.com/4071686/535490923-41bb24f6-a0f8-48a6-ae0f-0b82b53220ff.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjgzNzg1OTMsIm5iZiI6MTc2ODM3ODI5MywicGF0aCI6Ii80MDcxNjg2LzUzNTQ5MDkyMy00MWJiMjRmNi1hMGY4LTQ4YTYtYWUwZi0wYjgyYjUzMjIwZmYuZ2lmP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDExNCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjAxMTRUMDgxMTMzWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MTljZTljZDhkYWY0Y2ZjNDE1ZTRhNWFmMTFiMDE3MjQyYzEzNDgyNWY5YTNjZGVhZTMzODk4NDBiYTkyN2NiOCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.icGEAdASOgJ6CpjgPxxdHdeMigejNru-_Bb9oK4sKq4)
+
 ## 🚀 Features
 
 - 🔍 **Browse All Commands**: Select from all available VS Code commands via QuickPick
