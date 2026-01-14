@@ -1,0 +1,49 @@
+{
+  "name": "vscode-command-tester",
+  "displayName": "VS Code Command Tester",
+  "description": "Quick tool to test VS Code commands with arguments",
+  "version": "0.0.1",
+  "publisher": "dealenx",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dealenx/vscode-command-tester.git"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "homepage": "https://github.com/dealenx/vscode-command-tester#readme",
+  "bugs": {
+    "url": "https://github.com/dealenx/vscode-command-tester/issues"
+  },
+  "keywords": [
+    "command",
+    "tester",
+    "developer",
+    "testing"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "command-tester.quick",
+        "title": "Command Tester: Test VS Code Command"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "vscode:prepublish": "npm run compile",
+    "package": "npx @vscode/vsce package",
+    "publish": "npx @vscode/vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^4.9.4"
+  }
+}
