@@ -1,6 +1,26 @@
 import * as vscode from "vscode";
+import { CommandPanelProvider } from "./CommandPanelProvider";
 
 export function activate(context: vscode.ExtensionContext) {
+  // Register the Command Panel webview provider
+  const provider = new CommandPanelProvider(context.extensionUri);
+  context.subscriptions.push(
+    vscode.window.registerWebviewViewProvider(
+      CommandPanelProvider.viewType,
+      provider
+    )
+  );
+
+  // Register command to show panel
+  context.subscriptions.push(
+    vscode.commands.registerCommand("command-tester.showPanel", () => {
+      vscode.commands.executeCommand(
+        "workbench.view.extension.commandTesterView"
+      );
+    })
+  );
+
+  // Keep the existing quick command
   const disposable = vscode.commands.registerCommand(
     "command-tester.quick",
     async () => {

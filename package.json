@@ -2,7 +2,7 @@
   "name": "vscode-command-tester",
   "displayName": "VS Code Command Tester",
   "description": "Quick tool to test VS Code commands with arguments",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "publisher": "dealenx",
   "repository": {
     "type": "git",
@@ -31,8 +31,30 @@
       {
         "command": "command-tester.quick",
         "title": "Command Tester: Test VS Code Command"
+      },
+      {
+        "command": "command-tester.showPanel",
+        "title": "Command Tester: Show Panel"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "commandTesterView",
+          "title": "Command Tester",
+          "icon": "$(debug-console)"
+        }
+      ]
+    },
+    "views": {
+      "commandTesterView": [
+        {
+          "type": "webview",
+          "id": "commandTester.panel",
+          "name": "Command Panel"
+        }
+      ]
+    }
   },
   "scripts": {
     "compile": "tsc -p ./",
